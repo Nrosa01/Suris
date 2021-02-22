@@ -1,0 +1,114 @@
+body {
+    background-image: url('webBg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* CARD */
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 500px) {
+    .card-right {
+        width: 1280;
+        height: 80;
+    }
+}
+
+.card {
+    margin-top: 50px;
+    margin-right: -20px;
+    width: 90%;
+    height: 360;
+    background-image: url(card.png);
+    align-self: flex-end;
+    border-radius: 5px;
+    float: right;
+    border-color: aliceblue;
+    border-style: solid;
+}
+
+.left .card {
+    float: left;
+    margin-right: 0px;
+    margin-left: -20px;
+}
+
+.right .card {
+    float: right;
+}
+
+.rimg {
+    float: right;
+    margin-right: -350;
+    margin-top: -100px;
+    max-height: 475;
+}
+
+.limg {
+    float: left;
+    margin-left: -350px;
+    margin-top: -100px;
+    max-height: 475;
+    transform: scaleX(-1);
+}
+
+.card-tittle {
+    color: aliceblue;
+    font-size: 50;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.card-body {
+    color: aliceblue;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right .card-tittle {
+    float: right;
+    padding-right: 50px;
+    padding-top: 35px;
+}
+
+.right .card-body {
+    float: right;
+    padding-right: 50px;
+    padding-top: 25px;
+    text-align: right;
+}
+
+.left .card-tittle {
+    float: left;
+    padding-left: 50px;
+    padding-top: 35px;
+}
+
+.left .card-body {
+    float: left;
+    padding-left: 50px;
+    padding-top: 25px;
+    text-align: left;
+    margin-right: 50%;
+}
