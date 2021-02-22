@@ -72,6 +72,15 @@ h1 {
     transform: scaleX(-1);
 }
 
+.right .card-text{
+    margin-right: 250px;
+}
+
+.left .card-text{
+    margin-left: 250px;
+}
+
+
 .card-tittle {
     color: aliceblue;
     font-size: 50;
@@ -88,27 +97,22 @@ h1 {
 
 .right .card-tittle {
     float: right;
-    padding-right: 50px;
-    padding-top: 35px;
+    padding-top: 25px;
 }
 
 .right .card-body {
     float: right;
-    padding-right: 50px;
-    padding-top: 25px;
     text-align: right;
+    margin-left: 35%;
 }
 
 .left .card-tittle {
     float: left;
-    padding-left: 50px;
     padding-top: 35px;
 }
 
 .left .card-body {
     float: left;
-    padding-left: 50px;
-    padding-top: 25px;
     text-align: left;
-    margin-right: 50%;
+    margin-right: 30%;
 }
