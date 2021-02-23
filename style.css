@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -20,148 +22,83 @@ header {
 }
 
 h1 {
-    text-align: center;
+    font-size: 50px;
+    word-break: break-all;
 }
 
-/* FLIPPABLE CARD */
+/* GRID IMAGES */
 
-.flippableCard {
-    width: 400px;
-    height: 400px;
-    background-image: url(favicon.png);
-    background-size: cover;
-    background-color: burlywood;
+.content .row:not(:hover) image {
+    filter: grayscale(0);
 }
 
-.fTittle-container {
-    position: relative;
-    width: 400px;
-    height: 50;
-    text-align: center;
-    background-color: rgb(245, 245, 245);
+.content div:not(:hover) {
+    filter: grayscale(1);
 }
 
-.fTittle {
-    font-size: 150%;
-    text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+.content img:hover {
+    transform: scale(1.25);
 }
 
-.flippable-body {}
-
-/* HEADER */
-
-.header {
-    height: 600px;
+.content img {
+    width: 100%;
 }
 
-.tittleImg {
-    margin-left: -200px;
-    margin-top: 50px;
+* {
+    box-sizing: border-box;
 }
 
-.forestImg {
-    max-width: 500px;
-    margin-bottom: 100px;
-    padding-left: 60px;
+/* GRID */
+
+.main {
+    max-width: 1000px;
+    margin: auto;
 }
 
-.bichitoTittle {
-    position: absolute;
-    margin-left: -200px;
-    margin-top: -450px;
+.row {
+    margin: 8px -16px;
 }
 
-/* CARD */
+/* Add padding BETWEEN each column (if you want) */
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+.row, .row>.column {
+    padding: 8px;
+}
 
-@media screen and (max-width: 500px) {
-    .card-right {
-        width: 1280;
-        height: 80;
+/* Create four equal columns that floats next to each other */
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
     }
 }
 
-.card {
-    margin-top: 50px;
-    margin-right: -20px;
-    width: 90%;
-    height: 360;
-    background-image: url(card.png);
-    align-self: flex-end;
-    border-radius: 5px;
-    float: right;
-    border-color: aliceblue;
-    border-style: solid;
-}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
-.left .card {
-    float: left;
-    margin-right: 0px;
-    margin-left: -20px;
-}
-
-.right .card {
-    float: right;
-}
-
-.rimg {
-    float: right;
-    margin-right: -350;
-    margin-top: -100px;
-    max-height: 475;
-}
-
-.limg {
-    float: left;
-    margin-left: -350px;
-    margin-top: -100px;
-    max-height: 475;
-    transform: scaleX(-1);
-}
-
-.right .card-text {
-    margin-right: 250px;
-}
-
-.left .card-text {
-    margin-left: 250px;
-}
-
-.card-tittle {
-    color: aliceblue;
-    font-size: 50;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-}
-
-.card-body {
-    color: aliceblue;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.right .card-tittle {
-    float: right;
-    padding-top: 25px;
-}
-
-.right .card-body {
-    float: right;
-    text-align: right;
-    margin-left: 35%;
-}
-
-.left .card-tittle {
-    float: left;
-    padding-top: 35px;
-}
-
-.left .card-body {
-    float: left;
-    text-align: left;
-    margin-right: 30%;
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }
