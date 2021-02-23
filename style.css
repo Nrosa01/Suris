@@ -3,13 +3,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 20px;
+    padding: 20x;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
     overflow: scroll;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -23,25 +24,26 @@ header {
 
 h1 {
     font-size: 50px;
+    color: aliceblue;
+    text-align: center;
     word-break: break-all;
 }
 
 /* GRID IMAGES */
 
-.content .row:not(:hover) image {
-    filter: grayscale(0);
-}
-
-.content div:not(:hover) {
-    filter: grayscale(1);
+.content img:not(:hover) {
+    transition: transform .5s;
+    transform: scale(1);
 }
 
 .content img:hover {
+    transition: transform .2s;
     transform: scale(1.25);
 }
 
 .content img {
     width: 100%;
+    object-fit: cover;
 }
 
 * {
