@@ -32,18 +32,36 @@ h1 {
 /* GRID IMAGES */
 
 .content img:not(:hover) {
-    transition: transform .5s;
-    transform: scale(1);
-}
-
-.content img:hover {
     transition: transform .2s;
-    transform: scale(1.25);
+    transition-timing-function: ease-in-out;
+    transform: scale(1);
+
 }
 
 .content img {
     width: 100%;
     object-fit: cover;
+}
+
+.imageContainer {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.row div:hover {
+    filter: grayscale(0);
+}
+
+.row .column:hover img {
+    transition: transform .1s;
+    transform: scale(1.5) translateX(75px);
+    transition-timing-function: ease-in-out;
+}
+
+.row:hover .column:not(:hover) {
+    filter: grayscale(1) blur(2px);
+
 }
 
 * {
@@ -86,6 +104,7 @@ h1 {
 
 .content {
     background-color: white;
+    overflow: hidden;
     padding: 10px;
 }
 
