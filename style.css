@@ -23,30 +23,55 @@ h1 {
     text-align: center;
 }
 
+/* FLIPPABLE CARD */
+
+.flippableCard {
+    width: 400px;
+    height: 400px;
+    background-image: url(favicon.png);
+    background-size: cover;
+    background-color: burlywood;
+}
+
+.fTittle-container {
+    position: relative;
+    width: 400px;
+    height: 50;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.fTittle {
+    font-size: 150%;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.flippable-body {}
+
 /* HEADER */
 
-.header{
+.header {
     height: 600px;
 }
 
-.tittleImg{
+.tittleImg {
     margin-left: -200px;
     margin-top: 50px;
 }
 
-.forestImg{
+.forestImg {
     max-width: 500px;
     margin-bottom: 100px;
     padding-left: 60px;
 }
 
-.bichitoTittle{
+.bichitoTittle {
     position: absolute;
     margin-left: -200px;
     margin-top: -450px;
 }
-
-
 
 /* CARD */
 
@@ -97,14 +122,13 @@ h1 {
     transform: scaleX(-1);
 }
 
-.right .card-text{
+.right .card-text {
     margin-right: 250px;
 }
 
-.left .card-text{
+.left .card-text {
     margin-left: 250px;
 }
-
 
 .card-tittle {
     color: aliceblue;
